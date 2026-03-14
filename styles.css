@@ -1,139 +1,63 @@
+:root{
+   --color-principal:#590C72;
+   --color-secundario:#D39AE8;
+   --color-fondo:#d7afe5;
+   --color-texto:#D39AE8;
+}
+
 body{
-
-font-family:Arial;
-margin:0;
-background:#f5f5f5;
-
+   margin:0;
+   padding:0;
 }
 
-
-header{
-
-background:#2c1b12;
-color:white;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: var(--color-fondo);
 }
 
+header a{
+    width: 90px;
+}
+
+nav ul{
+   display:flex;
+   list-style:none;
+   gap:25px;
+}
 
 nav a{
-
-color:white;
-margin:10px;
-text-decoration:none;
-
+   text-decoration:none;
+   font-weight: bold;
+   color:black;
 }
 
-
-.hero{
-
-background:#d6c1a1;
-padding:100px;
-text-align:center;
-
+button a{
+    text-decoration: none;
+    color: white;
 }
 
-
-.boton{
-
-background:#5a3a1c;
-color:white;
-padding:15px 25px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-
+nav a:hover{
+   color:brown;
 }
 
-
-.boton-payco{
-
-background:#00aaff;
-color:white;
-padding:15px 25px;
-border:none;
-border-radius:6px;
-
+.logoletra {
+    width: 80px;
+    max-width: 120px;
+    height: auto;
 }
 
-
-.productos{
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-padding:50px;
-
+.btn-tienda{
+  background:#782494;
+  color:white;
+  padding:12px 20px;
+  border: 1px solid var(--color-principal);
+  border-radius:8px;
+  cursor:pointer;
 }
 
-
-.producto{
-
-background:white;
-padding:20px;
-width:230px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-}
-
-
-.producto img{
-
-width:100%;
-
-}
-
-
-.precio{
-
-font-size:20px;
-font-weight:bold;
-
-}
-
-
-.carrito-boton{
-
-text-align:center;
-padding:30px;
-
-}
-
-
-.checkout{
-
-max-width:600px;
-margin:auto;
-padding:40px;
-
-}
-
-
-.whatsapp{
-
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50px;
-text-decoration:none;
-
-}
-
-
-footer{
-
-background:#2c1b12;
-color:white;
-text-align:center;
-padding:20px;
-
+.btn-tienda:hover {
+    background-color: var(--color-principal);
 }
