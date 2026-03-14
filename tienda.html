@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tienda - Ser Café</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Ser Café</h1>
+
+<nav>
+
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+
+</nav>
+
+<div id="contador">🛒 <span id="carrito-num">0</span></div>
+
+</header>
+
+
+
+<section class="productos">
+
+<h2>Nuestros Cafés</h2>
+
+
+<div class="producto">
+
+<img src="images/cafe250.jpg">
+
+<h3>Café 250g</h3>
+
+<p>Café tostado premium</p>
+
+<p class="precio">$18.000</p>
+
+<button onclick="agregar('Café 250g',18000)">
+Agregar al carrito
+</button>
+
+</div>
+
+
+
+<div class="producto">
+
+<img src="images/cafe500.jpg">
+
+<h3>Café 500g</h3>
+
+<p>Café tostado premium</p>
+
+<p class="precio">$32.000</p>
+
+<button onclick="agregar('Café 500g',32000)">
+Agregar al carrito
+</button>
+
+</div>
+
+
+
+<div class="producto">
+
+<img src="images/cafe2500.jpg">
+
+<h3>Café 2500g</h3>
+
+<p>Café tostado premium</p>
+
+<p class="precio">$120.000</p>
+
+<button onclick="agregar('Café 2500g',120000)">
+Agregar al carrito
+</button>
+
+</div>
+
+</section>
+
+
+<div class="carrito-boton">
+
+<button onclick="irCarrito()">
+
+Ir al carrito
+
+</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

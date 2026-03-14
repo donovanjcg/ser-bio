@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finalizar compra</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Finalizar Compra</h1>
+
+</header>
+
+
+
+<section class="checkout">
+
+<h2>Tu pedido</h2>
+
+<div id="lista"></div>
+
+
+
+<h2>Ciudad</h2>
+
+<select id="ciudad">
+
+<option>Medellín</option>
+<option>Bello</option>
+<option>Envigado</option>
+<option>Itagüí</option>
+<option>Sabaneta</option>
+<option>La Estrella</option>
+<option>Copacabana</option>
+<option>Girardota</option>
+<option>Otra ciudad</option>
+
+</select>
+
+
+
+<p id="envio"></p>
+
+
+
+<h2>Total</h2>
+
+<p id="total"></p>
+
+
+
+<button class="boton" onclick="pagarWhatsapp()">
+
+Pedir por WhatsApp
+
+</button>
+
+
+
+<br><br>
+
+
+
+<button class="boton-payco">
+
+Pagar con Payco
+
+</button>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
