@@ -3,6 +3,7 @@
    --color-secundario:#D39AE8;
    --color-fondo:#d7afe5;
    --color-texto:#D39AE8;
+   --color-fondo-text: #e7daeb; 
 }
 
 body{
@@ -26,6 +27,7 @@ nav ul{
    display:flex;
    list-style:none;
    gap:25px;
+   padding: 2px;
 }
 
 nav a{
@@ -60,4 +62,49 @@ nav a:hover{
 
 .btn-tienda:hover {
     background-color: var(--color-principal);
+}
+
+.contenedorimg {
+    display: flex;
+    justify-content: center;
+}
+
+.img50 {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    border-radius: 8%;
+}
+
+.contenedor2c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-fondo-text);
+    gap: 5%;
+    padding: 10px;
+}
+
+.contenedor2ctext {
+    padding: 5%;
+}
+
+@media (max-width: 400px){
+    header {
+        padding: 10px 0px;
+        background-color: var(--color-fondo);
+    }
+
+    nav ul{
+        display:flex;
+        list-style:none;
+        gap:2px;
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    .img50 {
+        width: 90%;
+        padding: 0;
+    }
 }
