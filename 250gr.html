@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ser Café | Café Premium Colombiano</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Img/logoSC-10.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logoletra logoheader" src="Img/logoSC-letra-02.png" alt="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="perfil.html">Perfil de SerCafé</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <button class="btn-tienda">
+            <a href="tienda.html" >🛒 Comprar Café</a>
+        </button>
+    </header>
+
+    <div class="contenedor3c">
+        <img class="tiendaimg2" src="Img/perfil.png" alt="Perfil">
+        <img class="tiendaimg2" src="Img/250gr.png" alt="250 gramos">
+        <div>
+            <img class="tiendaimg3" src="Img/Compra.png" alt="descripcion">
+            <div>
+                    <button onclick="seleccionarMolienda('Grano')">Grano</button>
+                    <button onclick="seleccionarMolienda('Media')">Media</button>
+                    <button onclick="seleccionarMolienda('Fina')">Fina</button>
+                    <button onclick="seleccionarMolienda('Gruesa')">Gruesa</button>
+                </div>
+
+                <h3>Ubicación</h3>
+
+                <select id="departamento" onchange="cargarMunicipios()">
+                    <option value="">Seleccione departamento</option>
+                    <option value="Antioquia">Antioquia</option>
+                    <option value="Cundinamarca">Cundinamarca</option>
+                </select>
+
+                <select id="municipio">
+                    <option value="">Seleccione municipio</option>
+                </select>
+
+                <h3>Cantidad</h3>
+                <button onclick="disminuir()">-</button>
+                <span id="cantidad">1</span>
+                <button onclick="aumentar()">+</button>
+
+                <h3>Precio</h3>
+                <h2 id="precio">$45.900</h2>
+
+                <div id="boton-pago"></div>
+        </div>
+    </div>
+</body>
+</html>

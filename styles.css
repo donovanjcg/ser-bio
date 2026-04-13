@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
 :root{
    --color-principal:#590C72;
    --color-secundario:#D39AE8;
@@ -15,12 +17,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    position: fixed;
+    width: 99%;
+    padding: 0.4rem;
     background-color: var(--color-fondo);
 }
 
 header a{
     width: 90px;
+}
+
+p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5rem;
+}
+h1 {
+    font-family: Anton, sans-serif;
+    font-size:3rem;
+    color: #310240;
+}
+
+h2 {
+    font-family: Montserrat, sans-serif;
+    font-size:2.5rem;
+    color: #310240;
 }
 
 nav ul{
@@ -34,6 +54,7 @@ nav a{
    text-decoration:none;
    font-weight: bold;
    color:black;
+   font-family: 'Quicksand', sans-serif;
 }
 
 button a{
@@ -54,9 +75,9 @@ nav a:hover{
 .btn-tienda{
   background:#782494;
   color:white;
-  padding:12px 20px;
+  padding:0.9rem 1.5rem;
   border: 1px solid var(--color-principal);
-  border-radius:8px;
+  border-radius:0.55rem;
   cursor:pointer;
 }
 
@@ -67,13 +88,30 @@ nav a:hover{
 .contenedorimg {
     display: flex;
     justify-content: center;
+    max-width: 40%;
 }
 
 .img50 {
-    width: 50%;
+    max-width: 70%;
     height: auto;
-    padding: 20px;
-    border-radius: 8%;
+    padding: 0;
+    border-radius: 0.55rem;
+}
+
+.tiendaimg {
+    width: 18rem;
+}
+
+.tiendaimg2 {
+    width: 30%;
+}
+
+.tiendaimg3 {
+    width: 100%;
+}
+
+.compra {
+    width: 70%
 }
 
 .contenedor2c {
@@ -82,16 +120,61 @@ nav a:hover{
     align-items: center;
     background-color: var(--color-fondo-text);
     gap: 5%;
+    padding: 4.5rem 10px 10px;
+}
+
+.contenedor3c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    gap: 5%;
+    padding: 4.5rem 10px 10px;
+}
+
+.tiendah1 {
+    text-align: center;
+    background-color: var(--color-fondo-text);
+    padding: 4.5rem 10px 10px;
+    margin: 0;
+}
+
+.tiendaletra {
+    font-family: Anton, sans-serif;
+    color: #EFEFB9;
+    font-size: 2rem;
+}
+
+.tiendaletra2 {
+    font-family: Montserrat, sans-serif;
+    color: #EFEFB9;
+    font-size: 1rem;
+}
+
+.tiendaletra3 {
+    font-family: Quicksand, sans-serif;
+    color: #EFEFB9;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contenedor2c2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 5%;
     padding: 10px;
 }
 
 .contenedor2ctext {
-    padding: 5%;
+    padding: 3%;
+    max-width: 55%;
+    min-width: 50%;
 }
 
 @media (max-width: 400px){
     header {
-        padding: 10px 0px;
         background-color: var(--color-fondo);
     }
 
@@ -103,8 +186,37 @@ nav a:hover{
         font-size: 10px;
     }
 
+    .contenedorimg {
+        width: 100%;
+    }
+
     .img50 {
-        width: 90%;
+        width: 100%;
         padding: 0;
+    }
+
+    .contenedor2c {
+        flex-direction: column;
+    }
+
+    .tiendaimg {
+        width: 11rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    }
+    h1 {
+        font-family: Anton, sans-serif;
+        font-size:1.5rem;
+        color: #310240;
+    }
+
+    h2 {
+        font-family: Montserrat, sans-serif;
+        font-size:1.2rem;
+        color: #310240;
     }
 }
