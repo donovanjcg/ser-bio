@@ -30,10 +30,12 @@
         <div>
             <img class="tiendaimg3" src="Img/Compra.png" alt="descripcion">
             <div class="botones">
-                <button class="boton" onclick="seleccionarMolienda('Grano')">Grano</button>
-                <button class="boton" onclick="seleccionarMolienda('Media')">Media</button>
-                <button class="boton" onclick="seleccionarMolienda('Fina')">Fina</button>
-                <button class="boton" onclick="seleccionarMolienda('Gruesa')">Gruesa</button>
+                <button class="boton" onclick="seleccionarMolienda(this)">Fina</button>
+                <button class="boton" onclick="seleccionarMolienda(this)">Gruesa</button>
+            </div>
+              <div class="botones">
+                <button class="boton" onclick="seleccionarMolienda(this)">Grano</button>
+                <button class="boton" onclick="seleccionarMolienda(this)">Media</button>
             </div>
 
             <h3>Ubicación</h3>
@@ -59,5 +61,6 @@
             <div id="boton-pago"></div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
