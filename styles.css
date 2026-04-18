@@ -210,7 +210,21 @@ nav a:hover{
         padding: 0;
     }
 
+    .tiendaimg2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .tiendaimg21 {
+        width: 90%;
+        padding: 0;
+    }
+
     .contenedor2c {
+        flex-direction: column;
+    }
+
+    .contenedor3c {
         flex-direction: column;
     }
 
