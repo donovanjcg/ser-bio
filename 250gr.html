@@ -40,25 +40,29 @@
 
             <h3>Ubicación</h3>
 
-            <select id="departamento" onchange="cargarMunicipios()">
-                <option value="">Seleccione departamento</option>
+            <select class="boton" id="departamento" onchange="cargarMunicipios(); calcularTotal('media_libra')">
+                <option value="">Seleccione municipio</option>
                 <option value="Antioquia">Antioquia</option>
-                <option value="Cundinamarca">Cundinamarca</option>
+                <option value="Otro">Resto del pais</option>
             </select>
 
-            <select id="municipio">
-                <option value="">Seleccione municipio</option>
+            <select class="boton" id="municipio" onchange="calcularTotal('media_libra')">
             </select>
 
             <h3>Cantidad</h3>
-            <button onclick="disminuir()">-</button>
-            <span id="cantidad">1</span>
-            <button onclick="aumentar()">+</button>
+            <button class="boton2" onclick="disminuir(); calcularTotal('media_libra')">-</button>
+            <span class="tiendaletra3" id="cantidad">1</span>
+            <button class="boton2" onclick="aumentar() ; calcularTotal('media_libra')">+</button>
 
             <h3>Precio</h3>
-            <h2 id="precio">$45.900</h2>
+            <h2 class="boton" id="envio">$23.000</h2>
+            <h2 class="boton" id="total">$23.000</h2>
 
-            <div id="boton-pago"></div>
+            <button id="botonpago" onclick="calcularboton()">Calcular pago</button>
+
+            <form>
+                <div id="epayco-button-container"></div>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>
