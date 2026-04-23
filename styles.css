@@ -181,13 +181,20 @@ nav a:hover{
     min-width: 50%;
 }
 
+.botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 10px; /* espacio entre botones */
+    width: 100%;
+}
+
 .boton {
-    width: 45%;
+    width: 100%; /* importante para que ocupe toda la celda */
     height: 2.5rem;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     background-color: var(--color-principal);
     border-radius: 0.3rem;
-    color:#EFEFB9;
+    color: #EFEFB9;
     border-color: #EFEFB9;
 }
 

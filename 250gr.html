@@ -32,30 +32,31 @@
             <div class="botones">
                 <button class="boton" onclick="seleccionarMolienda(this)">Fina</button>
                 <button class="boton" onclick="seleccionarMolienda(this)">Gruesa</button>
-            </div>
-              <div class="botones">
                 <button class="boton" onclick="seleccionarMolienda(this)">Grano</button>
                 <button class="boton" onclick="seleccionarMolienda(this)">Media</button>
             </div>
 
             <h3>Ubicación</h3>
+            
+            <div class="botones">
+                <select class="boton" id="departamento" onchange="cargarMunicipios(); calcularTotal('media_libra')">
+                    <option value="">departamento</option>
+                    <option value="Antioquia">Antioquia</option>
+                    <option value="Otro">Resto del pais</option>
+                </select>
 
-            <select class="boton" id="departamento" onchange="cargarMunicipios(); calcularTotal('media_libra')">
-                <option value="">Seleccione municipio</option>
-                <option value="Antioquia">Antioquia</option>
-                <option value="Otro">Resto del pais</option>
-            </select>
-
-            <select class="boton" id="municipio" onchange="calcularTotal('media_libra')">
-            </select>
+                <select class="boton" id="municipio" onchange="calcularTotal('media_libra')">
+                </select>
+            </div>
 
             <h3>Cantidad</h3>
             <button class="boton2" onclick="disminuir(); calcularTotal('media_libra')">-</button>
             <span class="tiendaletra3" id="cantidad">1</span>
             <button class="boton2" onclick="aumentar() ; calcularTotal('media_libra')">+</button>
 
-            <h3>Precio</h3>
-            <h2 class="boton" id="envio">$23.000</h2>
+            <h3>Envío</h3>
+            <h2 class="boton" id="envio">$0</h2>
+            <h3>Total</h3>
             <h2 class="boton" id="total">$23.000</h2>
 
             <button id="botonpago" onclick="calcularboton()">Calcular pago</button>
