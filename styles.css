@@ -188,14 +188,50 @@ nav a:hover{
     width: 100%;
 }
 
+.resumen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.resumen-item {
+    text-align: center;
+}
+
+/* valores normales (envío, producto) */
+.valor {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EFEFB9;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* total más grande */
+.valor-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EFEFB9;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* botones reales */
 .boton {
-    width: 100%; /* importante para que ocupe toda la celda */
+    width: 100%;
     height: 2.5rem;
     font-family: Montserrat, sans-serif;
     background-color: var(--color-principal);
     border-radius: 0.3rem;
     color: #EFEFB9;
-    border-color: #EFEFB9;
+    border: 1px solid #EFEFB9;
+    cursor: pointer;
+}
+
+/* opcional: hover bonito */
+.boton:hover {
+    background-color: #84599e;
 }
 
 .boton2 {

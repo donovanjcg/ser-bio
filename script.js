@@ -87,6 +87,11 @@ function calcularTotal(present) {
         kilos = cantidad;
     }
 
+    if (present === "libra") {
+        // 1 libra = 1 kilo
+        kilos = cantidad * 3;
+    }
+
     // 🚚 COSTO ENVÍO BASE
     let envio = 18000;
 
@@ -117,7 +122,9 @@ function calcularTotal(present) {
 
     // 🎯 Mostrar resultados
     document.getElementById("envio").innerText = envio.toLocaleString();
-    document.getElementById("total").innerText = totalFinal.toLocaleString(); 
+    document.getElementById("total").innerText = totalProducto.toLocaleString(); 
+    document.getElementById("totalpagar").innerText = totalFinal.toLocaleString(); 
+    
     const boton = document.getElementById("botonpago");
     if (boton.style.display === "none") {
         boton.style.display = "block"; // o "flex", "inline-block", etc.
@@ -129,7 +136,7 @@ function calcularTotal(present) {
 function calcularboton (){
     document.getElementById('epayco-button-container').style.display = "block";
     document.getElementById("botonpago").style.display = "none"
-    const totalTexto = document.getElementById("total").innerText;
+    const totalTexto = document.getElementById("totalpagar").innerText;
     const totalpago = parseInt(totalTexto.replace(/\./g, '').replace(/,/g, ''));
 
     const contenedor = document.getElementById('epayco-button-container');
