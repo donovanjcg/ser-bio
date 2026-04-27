@@ -189,21 +189,60 @@ nav a:hover{
 }
 
 .resumen {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.resumen-item {
-    text-align: center;
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+}
+
+.label {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    color: var(--color-texto-hueso);
+}
+
+/* Valores pequeños (envío y producto) */
+.valor.pequeno {
+    font-size: 18px;
+}
+
+/* Total destacado */
+.total {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    border-radius: 0.3rem;
+    border: 1px solid #EFEFB9;
+}
+
+.label-total {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--color-texto-hueso);
+}
+
+.valor.grande {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 /* valores normales (envío, producto) */
 .valor {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #EFEFB9;
+    color: var(--color-texto-hueso);
     margin-top: 0.5rem;
     text-align: center;
 }

@@ -62,7 +62,7 @@ function disminuir() {
 function calcularTotal(present) {
     const cantidad = parseInt(document.getElementById("cantidad").innerText) || 1;
     if (present == "media_libra"){
-        var precioUnitario = 23000; // 👈 cambia esto por tu precio real;
+        var precioUnitario = 2000; // 👈 cambia esto por tu precio real;
     } else if (present == "libra"){
         var precioUnitario = 42000;
     } else {

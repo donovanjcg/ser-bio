@@ -55,18 +55,23 @@
             <button class="boton2" onclick="aumentar() ; calcularTotal('media_libra')">+</button>
             
             <div class="resumen">
-                <div class="resumen-item">
-                    <h3>Envío</h3>
-                    <h2 class="valor" id="envio">$0</h2>
-                </div>
-                <div class="resumen-item">
-                    <h3>Producto</h3>
-                    <h2 class="valor" id="total">$23.000</h2>
-                </div>
-            </div>  
+                <div class="fila">
+                    <div class="item">
+                        <span class="label">Envío</span>
+                        <span class="valor pequeno" id="envio">$0</span>
+                    </div>
 
-            <h3>Total a Pagar</h3>
-            <h2 class="valor-total" id="totalpagar">$23.000</h2>
+                    <div class="item">
+                        <span class="label">Producto</span>
+                        <span class="valor pequeno" id="total">$23.000</span>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <span class="label-total">Total a pagar</span>
+                    <span class="valor grande" id="totalpagar">$23.000</span>
+                </div>
+            </div>
 
             <button id="botonpago" class="boton" onclick="calcularboton()">Calcular pago</button>
 
