@@ -28,7 +28,7 @@
         <img class="tiendaimg2" src="Img/perfil.png" alt="Perfil">
         <img class="tiendaimg2" src="Img/250gr.png" alt="250 gramos">
         <div class="tiendaimg21">
-            <img class="tiendaimg3" src="Img/Compra.png" alt="descripcion">
+            <img class="tiendaimg3" src="Img/Compra_250.png" alt="descripcion">
             <div class="botones">
                 <button class="boton" onclick="seleccionarMolienda(this)">Fina</button>
                 <button class="boton" onclick="seleccionarMolienda(this)">Gruesa</button>
@@ -39,20 +39,20 @@
             <h3>Ubicación</h3>
             
             <div class="botones">
-                <select class="boton" id="departamento" onchange="cargarMunicipios(); calcularTotal('media_libra')">
+                <select class="boton" id="departamento" onchange="cargarMunicipios(); calcularTotal('250')">
                     <option value="">departamento</option>
                     <option value="Antioquia">Antioquia</option>
                     <option value="Otro">Resto del pais</option>
                 </select>
 
-                <select class="boton" id="municipio" onchange="calcularTotal('media_libra')">
+                <select class="boton" id="municipio" onchange="calcularTotal('250')">
                 </select>
             </div>
 
             <h3>Cantidad</h3>
-            <button class="boton2" onclick="disminuir(); calcularTotal('media_libra')">-</button>
+            <button class="boton2" onclick="disminuir(); calcularTotal('250')">-</button>
             <span class="tiendaletra3" id="cantidad">1</span>
-            <button class="boton2" onclick="aumentar() ; calcularTotal('media_libra')">+</button>
+            <button class="boton2" onclick="aumentar() ; calcularTotal('250')">+</button>
             
             <div class="resumen">
                 <div class="fila">
@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <button id="botonpago" class="boton" onclick="calcularboton()">Calcular pago</button>
+            <button id="botonpago" class="boton" onclick="calcularboton('250')">Calcular pago</button>
 
             <form>
                 <div id="epayco-button-container"></div>

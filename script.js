@@ -1,9 +1,12 @@
+let moliendaSeleccionada = "";
+
 function seleccionarMolienda(botonSeleccionado) {
     const botones = document.querySelectorAll('.boton');
 
     botones.forEach(b => b.classList.remove("seleccionado"));
 
     botonSeleccionado.classList.add("seleccionado");
+    moliendaSeleccionada = botonSeleccionado.innerText;
 }
 
 function cargarMunicipios() {
@@ -61,9 +64,9 @@ function disminuir() {
 
 function calcularTotal(present) {
     const cantidad = parseInt(document.getElementById("cantidad").innerText) || 1;
-    if (present == "media_libra"){
-        var precioUnitario = 2000; // 👈 cambia esto por tu precio real;
-    } else if (present == "libra"){
+    if (present == "250"){
+        var precioUnitario = 23000; // 👈 cambia esto por tu precio real;
+    } else if (present == "500"){
         var precioUnitario = 42000;
     } else {
         var precioUnitario = 189900
@@ -77,17 +80,17 @@ function calcularTotal(present) {
     // ⚖️ CALCULAR PESO
     let kilos = 1;
 
-    if (present === "media_libra") {
+    if (present === "250") {
         // 2 medias libras = 1 kilo (por empaque)
         kilos = Math.ceil(cantidad / 3);
     }
 
-    if (present === "libra") {
+    if (present === "500") {
         // 1 libra = 1 kilo
         kilos = cantidad;
     }
 
-    if (present === "libra") {
+    if (present === "2500") {
         // 1 libra = 1 kilo
         kilos = cantidad * 3;
     }
@@ -113,7 +116,7 @@ function calcularTotal(present) {
     }
 
     // ➕ KILOS ADICIONALES
-    if (kilos > 1) {
+    if (kilos > 1 && envio != 0) {
         envio += (kilos - 1) * 4400;
     }
 
@@ -133,9 +136,15 @@ function calcularTotal(present) {
     const contenedor = document.getElementById('epayco-button-container').style.display = "none";
 }
 
-function calcularboton (){
+function calcularboton (tamano){
+    if (!moliendaSeleccionada) {
+        alert("Selecciona la molienda");
+        return;
+    }
+
     document.getElementById('epayco-button-container').style.display = "block";
-    document.getElementById("botonpago").style.display = "none"
+    document.getElementById("botonpago").style.display = "none";
+
     const totalTexto = document.getElementById("totalpagar").innerText;
     const totalpago = parseInt(totalTexto.replace(/\./g, '').replace(/,/g, ''));
 
@@ -144,6 +153,18 @@ function calcularboton (){
         contenedor.innerHTML = ''; // Limpiar el contenedor
     }
     
+    // 🔥 REFERENCIA ÚNICA
+    const referencia = "PED-" + Date.now();
+
+    // 🔥 DATOS DEL PEDIDO
+    const descripcion = JSON.stringify({
+        ref: referencia,
+        molienda: moliendaSeleccionada,
+        tamano: tamano,
+        total: totalpago
+    });
+
+
     // 2. Crear el nuevo script con el valor actualizado
     const script = document.createElement('script');
     script.src = 'https://checkout.epayco.co/checkout.js';
@@ -153,7 +174,9 @@ function calcularboton (){
     script.setAttribute('data-epayco-tax', '0');
     script.setAttribute('data-epayco-tax-ico', '0');
     script.setAttribute('data-epayco-tax-base', '0');
-    script.setAttribute('data-epayco-name', '(Prueba) Café Molido 500 gramos - Ser Café');
+    script.setAttribute('data-epayco-name', tamano + ' gramos - Ser Café - ' + moliendaSeleccionada);
+    script.setAttribute('data-epayco-description', descripcion);
+    script.setAttribute('data-epayco-ref_payco', referencia);
     script.setAttribute('data-epayco-currency', 'COP');
     script.setAttribute('data-epayco-country', 'CO');
     script.setAttribute('data-epayco-test', '');
