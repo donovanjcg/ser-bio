@@ -287,6 +287,17 @@ nav a:hover{
     color: var(--color-principal);
 }
 
+.hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
 @media (max-width: 700px){
     header {
         background-color: var(--color-fondo);
