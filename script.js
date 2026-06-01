@@ -65,7 +65,7 @@ function disminuir() {
 function calcularTotal(present) {
     const cantidad = parseInt(document.getElementById("cantidad").innerText) || 1;
     if (present == "250"){
-        var precioUnitario = 23000; // 👈 cambia esto por tu precio real;
+        var precioUnitario = 5000; // 👈 cambia esto por tu precio real;
     } else if (present == "500"){
         var precioUnitario = 42000;
     } else {
