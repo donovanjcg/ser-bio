@@ -168,7 +168,7 @@ function calcularboton (tamano){
     // 2. Crear el nuevo script con el valor actualizado
     const script = document.createElement('script');
     script.src = 'https://checkout.epayco.co/checkout.js';
-    script.setAttribute('data-epayco-key', '30a566319a8faf42b3c7728630533513');
+    script.setAttribute('data-epayco-key', '0264589072eed07a1691432a43571d49');
     script.setAttribute('class', 'epayco-button');
     script.setAttribute('data-epayco-amount', totalpago);
     script.setAttribute('data-epayco-tax', '0');
@@ -183,7 +183,7 @@ function calcularboton (tamano){
     script.setAttribute('data-epayco-external', '');
     script.setAttribute('data-epayco-response', '');
     script.setAttribute('data-epayco-confirmation', '');
-    script.setAttribute('data-epayco-button', 'https://multimedia.epayco.co/dashboard/btns/btn2.png');
+    script.setAttribute('data-epayco-button', 'https://multimedia.epayco.co/adquirencia-movil/botones/boton-azul-124_38.png');
     
     // 3. Agregar el nuevo script al contenedor
     if (contenedor) {
