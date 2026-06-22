@@ -51,6 +51,13 @@ h3 {
     font-weight:550;
 }
 
+.textoh3 {
+    font-family: Montserrat, sans-serif;
+    font-size:1.5rem;
+    color:var(--color-principal);
+    font-weight:550;
+}
+
 nav ul{
    display:flex;
    list-style:none;
@@ -68,6 +75,11 @@ nav a{
 button a{
     text-decoration: none;
     color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #310240;
 }
 
 nav a:hover{
@@ -172,7 +184,7 @@ nav a:hover{
     align-items: center;
     background-color: white;
     gap: 5%;
-    padding: 10px;
+    padding: 4.5rem 10px 10px;
 }
 
 .contenedor2ctext {
@@ -287,15 +299,8 @@ nav a:hover{
     color: var(--color-principal);
 }
 
-.hero {
-  position: relative;
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+.texto {
+    text-align: center;
 }
 
 @media (max-width: 700px){
@@ -332,6 +337,17 @@ nav a:hover{
 
     .contenedor2c {
         flex-direction: column;
+        padding: 2rem 10px 10px;
+    }
+
+    .contenedor2c2 {
+        flex-direction: column;
+        padding: 10px 2rem;
+    }
+
+    .contenedor2c3 {
+        display: flex;
+        padding: 0;
     }
 
     .contenedor3c {
@@ -346,6 +362,9 @@ nav a:hover{
     p {
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
+    text-align: center;
+    padding: 0 0 0 1rem;
+    width: 100%;
     }
     h1 {
         font-family: Anton, sans-serif;
@@ -357,5 +376,9 @@ nav a:hover{
         font-family: Montserrat, sans-serif;
         font-size:1.2rem;
         color: #310240;
+    }
+
+    .textoh3 {
+        text-align: center;
     }
 }
