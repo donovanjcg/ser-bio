@@ -966,7 +966,7 @@ function generarBotonPago() {
 
     script.setAttribute(
         "data-epayco-key",
-        "0264589072eed07a1691432a43571d49"
+        "30a566319a8faf42b3c7728630533513"
     );
 
     script.setAttribute(
@@ -1027,18 +1027,18 @@ function generarBotonPago() {
     // URL de respuesta
     script.setAttribute(
         "data-epayco-response",
-        ""
+        "https://script.google.com/macros/s/AKfycbz5YHtZpU3QLR0GzPLOo0iXgIPcivR9nHHZX76MuRyUDB9omOpL1f5W6b68sCtTBYUPqA/exec"
     );
 
     // URL confirmación
     script.setAttribute(
         "data-epayco-confirmation",
-        ""
+        "https://ser-cafe.com/#details"
     );
 
     script.setAttribute(
         "data-epayco-button",
-        "https://multimedia.epayco.co/adquirencia-movil/botones/boton-azul-124_38.png"
+        "https://multimedia.epayco.co/dashboard/btns/btn2.png"
     );
 
     // Información adicional

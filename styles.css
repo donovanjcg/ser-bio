@@ -49,6 +49,7 @@ h3 {
     font-size:1rem;
     color:var(--color-texto-hueso);
     font-weight:550;
+    text-align: center;
 }
 
 .textoh3 {
@@ -303,6 +304,62 @@ nav a:hover{
     text-align: center;
 }
 
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f5fb;
+}
+
+.caracteristicas{
+    max-width:85%;
+    margin:40px auto;
+    padding:1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+    gap:1rem;
+}
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding: 0.8rem;
+    text-align:center;
+    box-shadow:0 0.1rem 0.2rem rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+}
+
+.icono{
+    width:5rem;
+    height:5rem;
+    margin:0 auto 1rem;
+    border-radius:50%;
+    background:#efe2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.2rem;
+}
+
+.card h3{
+    font-size:1.5rem;
+    color:#111;
+    margin-bottom:0.8rem;
+}
+
+.card p{
+    font-size:1.1rem;
+    color:#555;
+    line-height:1.5;
+}
+
+.contenedor2cimgtex {
+    text-align: center;
+}
+
 @media (max-width: 700px){
     header {
         background-color: var(--color-fondo);
@@ -359,12 +416,22 @@ nav a:hover{
         padding-bottom: 2rem;
     }
 
+    .card h3{
+        font-size:1.1rem;
+        padding: 0;
+    }   
+
+    .card p{
+        font-size:1rem;
+        padding: 0;
+    }
+
     p {
-    font-family: Montserrat, sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 0 0 0 1rem;
-    width: 100%;
+        font-family: Montserrat, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 0 0 1rem;
+        width: 100%;
     }
     h1 {
         font-family: Anton, sans-serif;
@@ -374,7 +441,7 @@ nav a:hover{
 
     h2 {
         font-family: Montserrat, sans-serif;
-        font-size:1.2rem;
+        font-size:1.3rem;
         color: #310240;
     }
 

@@ -65,7 +65,7 @@ function disminuir() {
 function calcularTotal(present) {
     const cantidad = parseInt(document.getElementById("cantidad").innerText) || 1;
     if (present == "250"){
-        var precioUnitario = 23000; // 👈 cambia esto por tu precio real;
+        var precioUnitario = 3000; // 👈 cambia esto por tu precio real;
     } else if (present == "500"){
         var precioUnitario = 42000;
     } else {
@@ -168,7 +168,7 @@ function calcularboton (tamano){
     // 2. Crear el nuevo script con el valor actualizado
     const script = document.createElement('script');
     script.src = 'https://checkout.epayco.co/checkout.js';
-    script.setAttribute('data-epayco-key', '0264589072eed07a1691432a43571d49');
+    script.setAttribute('data-epayco-key', '30a566319a8faf42b3c7728630533513');
     script.setAttribute('class', 'epayco-button');
     script.setAttribute('data-epayco-amount', totalpago);
     script.setAttribute('data-epayco-tax', '0');
@@ -181,9 +181,9 @@ function calcularboton (tamano){
     script.setAttribute('data-epayco-country', 'CO');
     script.setAttribute('data-epayco-test', '');
     script.setAttribute('data-epayco-external', '');
-    script.setAttribute('data-epayco-response', '');
-    script.setAttribute('data-epayco-confirmation', '');
-    script.setAttribute('data-epayco-button', 'https://multimedia.epayco.co/adquirencia-movil/botones/boton-azul-124_38.png');
+    script.setAttribute('data-epayco-response', 'https://ser-cafe.com/#details');
+    script.setAttribute('data-epayco-confirmation', 'https://script.google.com/macros/s/AKfycbz5YHtZpU3QLR0GzPLOo0iXgIPcivR9nHHZX76MuRyUDB9omOpL1f5W6b68sCtTBYUPqA/exec');
+    script.setAttribute('data-epayco-button', 'https://multimedia.epayco.co/dashboard/btns/btn2.png');
     
     // 3. Agregar el nuevo script al contenedor
     if (contenedor) {
